@@ -5,14 +5,15 @@
     <title>HTML Academy: Девайс</title>
   </head>
   <body>
+    <!--Хедер-->
     <header class="page-header">
       <nav class="navigation">
         <a class="navigation-logo" href="#">
       <img class="page-header-logo" src="#" alt="Логотип интернет-магазина Device">
     </a>
-     <form action="" method="get">
-        <input name="header-search" type="search" placeholder="Текст поиска">
-        <button type="submit">Найти</button>
+     <form class="search-form" action="https://echo.htmlacademy.ru/" method="get">
+        <input class="header-search" name="header-search" type="search" placeholder="Текст поиска">
+        <button class="search-button" type="submit">Найти</button>
       </form>
       <ul class="navigation-user">
         <li class="navigation-user-item">
@@ -49,8 +50,137 @@
       </ul>
       </nav>
     </header>
-    
 
+<main class="main-index">
+  <h1 class="visually-hidden">Интернет-магазин Device</h1>
+  <section class="gallery">
+    <h2 class="visually-hidden">Фотогалерея</h2>
+    <ol class="slider-list">
+      <li class="slider-item">
+    <img class="slider-image quadrocopter" src="#" alt="Квадрокоптер">
+    <button class="slider-button slider-prev" type="button">
+      <span Class="visually-hidden">Предыдущее фото</span>
+    </button>
+    <button class="slider-button slider-next" type="button">
+      <span Class="visually-hidden">Следующее фото</span>
+    </button>
+    <p class="slider-text">Порхает как бабочка,<br> жалит как пчела</p>
+        <p class="slider-text">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
+      <a class="quadrocopter-link" href="catalog.html">Подробнее</a>
+    <table class="slider-advantages quadrocopter-advantages">
+      <tr class="slider-advantages-value">
+        <!--Надо ли проставлять классы для <td>?-->
+        <td>800 м</td>
+        <td>50 м</td>
+      </tr>
+      <tr class="slider-advantages-heading">
+        <td>Дальность полета</td>
+        <td>Радиус поражения</td>
+      </tr>
+    </table>
+  
+</li>
+<li class="slider-item">
+  <img class="slider-image fitness-tracker" src="#" alt="Фитнес-браслет">
+  <button class="slider-button slider-prev" type="button">
+    <span Class="visually-hidden">Предыдущее фото</span>
+  </button>
+  <button class="slider-button slider-next" type="button">
+    <span Class="visually-hidden">Следующее фото</span>
+  </button>
+  <p class="slider-text">Худеем <br> правильно!</p>
+      <p class="slider-text">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
+    <a class="fitness-tracker-link" href="catalog.html">Подробнее</a>
+  <table class="slider-advantages fitness-tracker-advantages">
+    <tr class="slider-advantages-value">
+      <td>48 часов</td>
+    </tr>
+    <tr>
+      <td class="slider-advantages-heading">Без подзарядки</td>
+    </tr>
+   
+  </table>
+
+</li>
+<li class="slider-item">
+  <img class="slider-image selfie-stick" src="#" alt="Палка для селфи">
+  <button class="slider-button slider-prev" type="button">
+    <span Class="visually-hidden">Предыдущее фото</span>
+  </button>
+  <button class="slider-button slider-next" type="button">
+    <span Class="visually-hidden">Следующее фото</span>
+  </button>
+  <p class="slider-text">Делай селфи, <br> как Бен Стиллер! </p>
+      <p class="slider-text">Самая длинная палка для селфи доступна в нашем магазине. Восемь <em>(Восемь, Карл!)</em> метров длиной и весом всего 5 кг.
+      </p>
+    <a class="selfie-stick-link" href="catalog.html">Подробнее</a>
+  <table class="slider-advantages selfie-stick-advantages">
+    <tr class="slider-advantages-value">
+      <td>8,5 м </td>
+      <td>5 кг</td>
+      <td>Карбон</td>
+    </tr>
+    <tr class="slider-advantages-heading">
+      <td>Длина палки</td>
+      <td>Вес палки</td>
+      <td>Материал</td>
+    </tr>
+  </table>
+
+</li>
+</ol>
+  </section>
+  <section class="catalog-categories-index">
+    <h2 class="visually-hidden">Пункты каталога</h2>
+    <ul class="catalog-categories-list">
+      <li class="catalog-categories-item">
+        <a class="catalog-categories-link" href="#">
+          <img class="catalog-categories-image" src="#" alt="Виртуальная реальность">
+          <span class="catalog-categories-caption">Виртуальная реальность</span>
+        </a>
+      </li>
+      <li class="catalog-categories-item">
+        <a class="catalog-categories-link" href="#">
+          <img class="catalog-categories-image" src="#" alt="Моноподы для селфи">
+          <span class="catalog-categories-caption">Моноподы для селфи</span>
+        </a>
+      </li>
+      <li class="catalog-categories-item">
+        <a class="catalog-categories-link" href="#">
+          <img class="catalog-categories-image" src="#" alt="Экшн-камеры">
+          <span class="catalog-categories-caption">Экшн-камеры</span>
+        </a>
+      </li>
+      <li class="catalog-categories-item">
+        <a class="catalog-categories-link" href="#">
+          <img class="catalog-categories-image" src="#" alt="Фитнес-браслеты">
+          <span class="catalog-categories-caption">Фитнес-браслеты</span>
+        </a>
+      </li>
+      <li class="catalog-categories-item">
+        <a class="catalog-categories-link" href="#">
+          <img class="catalog-categories-image" src="#" alt="Умные часы">
+          <span class="catalog-categories-caption">Умные часы</span>
+        </a>
+      </li>
+      <li class="catalog-categories-item">
+        <a class="catalog-categories-link" href="#">
+          <img class="catalog-categories-image" src="#" alt="Квадрокоптеры">
+          <span class="catalog-categories-caption">Квадрокоптеры</span>
+        </a>
+      </li>
+
+    </ul>
+  </section>
+  <h2 class="visually-hidden">Доставка редкого товара</h2>
+  <section class="rare-product-delivery">
+    <a class="rare-product-delivery-link">
+      <img class="rare-product-delivery-truck" src="#">
+      <span class="rare-product-delivery-text">Доставим редкий товар под заказ</span>
+      <img class="rare-product-delivery-info" src="#">
+    </a>
+  </section>
+</main>
     
 
   </body>
