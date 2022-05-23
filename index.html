@@ -2,14 +2,14 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Девайс</title>
+    <title>Интернет-магазин Device</title>
   </head>
   <body>
     <!--Хедер-->
     <header class="page-header">
       <nav class="navigation">
         <a class="navigation-logo" href="#">
-      <img class="page-header-logo" src="#" alt="Логотип интернет-магазина Device">
+      <img class="page-header-logo" src="#" alt="Логотип интернет-магазина «Девайс»">
     </a>
      <form class="search-form" action="https://echo.htmlacademy.ru/" method="get">
         <input class="header-search" name="header-search" type="search" placeholder="Текст поиска">
@@ -52,7 +52,7 @@
     </header>
 
 <main class="main-index">
-  <h1 class="visually-hidden">Интернет-магазин Device</h1>
+  <h1 class="visually-hidden">Интернет-магазин «Девайс»</h1>
   <section class="gallery">
     <h2 class="visually-hidden">Фотогалерея</h2>
     <ol class="slider-list">
@@ -66,7 +66,25 @@
     </button>
     <p class="slider-text">Порхает как бабочка,<br> жалит как пчела</p>
         <p class="slider-text">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
-      <a class="quadrocopter-link" href="catalog.html">Подробнее</a>
+      <a class="button" href="catalog.html">Подробнее</a>
+      <ol class="slider-pagination-item">
+        <li class="slider-pagination-item">
+        <button class="slider-pagination-button slider-pagination-button-current" type="button">
+          <span class="visually-hidden">1 фото</span>
+        </button>
+      </li>
+      <li class="slider-pagination-item">
+        <button class="slider-pagination-button" type="button">
+          <span class="visually-hidden">2 фото</span>
+        </button>
+      </li>
+      <li class="slider-pagination-item">
+        <button class="slider-pagination-button" type="button">
+          <span class="visually-hidden">3 фото</span>
+        </button>
+      </li>
+      
+    </ol>
     <table class="slider-advantages quadrocopter-advantages">
       <tr class="slider-advantages-value">
         <!--Надо ли проставлять классы для <td>?-->
@@ -90,7 +108,25 @@
   </button>
   <p class="slider-text">Худеем <br> правильно!</p>
       <p class="slider-text">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
-    <a class="fitness-tracker-link" href="catalog.html">Подробнее</a>
+    <a class="button" href="catalog.html">Подробнее</a>
+    <ol class="slider-pagination-item">
+      <li class="slider-pagination-item">
+      <button class="slider-pagination-button slider-pagination-button-current" type="button">
+        <span class="visually-hidden">1 фото</span>
+      </button>
+    </li>
+    <li class="slider-pagination-item">
+      <button class="slider-pagination-button" type="button">
+        <span class="visually-hidden">2 фото</span>
+      </button>
+    </li>
+    <li class="slider-pagination-item">
+      <button class="slider-pagination-button" type="button">
+        <span class="visually-hidden">3 фото</span>
+      </button>
+    </li>
+    
+  </ol>
   <table class="slider-advantages fitness-tracker-advantages">
     <tr class="slider-advantages-value">
       <td>48 часов</td>
@@ -113,7 +149,25 @@
   <p class="slider-text">Делай селфи, <br> как Бен Стиллер! </p>
       <p class="slider-text">Самая длинная палка для селфи доступна в нашем магазине. Восемь <em>(Восемь, Карл!)</em> метров длиной и весом всего 5 кг.
       </p>
-    <a class="selfie-stick-link" href="catalog.html">Подробнее</a>
+    <a class="button" href="catalog.html">Подробнее</a>
+    <ol class="slider-pagination-item">
+      <li class="slider-pagination-item">
+      <button class="slider-pagination-button slider-pagination-button-current" type="button">
+        <span class="visually-hidden">1 фото</span>
+      </button>
+    </li>
+    <li class="slider-pagination-item">
+      <button class="slider-pagination-button" type="button">
+        <span class="visually-hidden">2 фото</span>
+      </button>
+    </li>
+    <li class="slider-pagination-item">
+      <button class="slider-pagination-button" type="button">
+        <span class="visually-hidden">3 фото</span>
+      </button>
+    </li>
+    
+  </ol>
   <table class="slider-advantages selfie-stick-advantages">
     <tr class="slider-advantages-value">
       <td>8,5 м </td>
@@ -172,14 +226,79 @@
 
     </ul>
   </section>
-  <h2 class="visually-hidden">Доставка редкого товара</h2>
+  <section class="services">
+    <h2 class="visually-hidden">Услуги</h2>
+    <ol class="services-list-buttons">
+      <li class="services-list-buttons-item"><button class="services-list-button" type="button">Доставка</button></li>
+      <li class="services-list-buttons-item"><button class="services-list-button" type="button">Гарантия</button></li>
+      <li class="services-list-buttons-item"><button class="services-list-button" type="button">Кредит</button></li>
+    </ol>
+    <ol class="services-list">
+      <li class="services-list-item">
+        <h3 class="services-list-heading">Доставка</h3>
+        <p class="services-list-text">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+        <img class="services-list-icon" src="#" alt="">
+      </li>
+      <li class="services-list-item">
+        <h3 class="services-list-heading">Гарантия</h3>
+        <p class="services-list-text">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
+          <img class="services-list-icon" src="#" alt="">
+        </li>
+        <li class="services-list-item">
+          <h3 class="services-list-heading">Кредит</h3>
+          <p class="services-list-text">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
+            <img class="services-list-icon" src="#" alt="">
+          </li>
+      
+      
+    </ol>
+  </section>
   <section class="rare-product-delivery">
-    <a class="rare-product-delivery-link">
-      <img class="rare-product-delivery-truck" src="#">
-      <span class="rare-product-delivery-text">Доставим редкий товар под заказ</span>
-      <img class="rare-product-delivery-info" src="#">
+  <h2 class="visually-hidden">Доставка редкого товара</h2>
+  
+    
+      <button class="rare-product-delivery-button" type="button">
+        <img class="rare-product-delivery-truck" src="#">
+        Доставим редкий товар под заказ
+      </button>
+      <a class="rare-product-delivery-link" href="#">
+        <img class="rare-product-delivery-info " src="#">
     </a>
   </section>
+  <section class="about-company">
+    <h2 class="about-company-heading">О нас</h2>
+    <p class="about-company-text">
+      Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.
+    </p>
+    <p class="about-company-text">
+      Мы можем доставить ваш товар в самые отдалённые уголки России транспортными компаниями:  
+    </p>
+    <ul class="about-company-delivery-list">
+        <li class="about-company-delivery-item">Меловые линии</li>
+        <li class="about-company-delivery-item">СДИК</li>
+        <li class="about-company-delivery-item">Токс-Бери</li>
+      </ul>
+    <a class="button" href="#">Подробнее о нас </a>
+  </section>
+  <section class="contacts">
+    <h2 class="contacts-heading">Контакты</h2>
+    <p class="contacts-text">Вы можете забрать товар сами, заехав в наш офис. 
+      Заодно сможете проверить работоспособность покупки. 
+    </p>
+    <p class="contacts-name-of-shop">
+      Интернет-магазин «Девайс»
+    </p>
+    <adress class="contacts-address">
+    <p class="contacts-address-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
+    <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+    <h3 class="contacts-subtitle"></h3>Время работы</h3>
+  </adress>
+  <ul class="contacts-schedule">
+    <li class="contacts-schedule-item">пн—пт: с 10:00 до 22:00</li>
+    <li class="contacts-schedule-item">сб—вс: с 10:00 до 19:00</li>
+    <a class="button" href="#">Напишите нам</a>
+  </section>
+
 </main>
     
 
