@@ -13,60 +13,61 @@
     <!-- Хедер -->
     <!-- Навигация -->
     <header class="page-header">
-      <div class="white-box"></div>
       <nav class="navigation">
-
-        <a class="navigation-logo" href="index.html">
-          <img class="page-header-logo" src="images/header/logo-header.svg" width="145" height="36"
-            alt="Логотип интернет-магазина «Девайс».">
-        </a>
-        <!-- Пользовательская навигация -->
-
-        <div class="user-wrapper">
-          <form class="search-form" action="https://echo.htmlacademy.ru/" method="get" name="search-form">
-            <labeL class="visually-hidden" for="header-search-form"> Пoиск</labeL>
-            <input class="header-search" name="header-search" type="search" placeholder="Текст поиска"
-              id="header-search-form" required>
-            <button class="search-button" type="submit">Найти</button>
-          </form>
-          <ul class="navigation-user">
-            <li class="navigation-user-item enter">
-              <a class="navigation-user-link enter" href="#">Войти</a>
+        <div class="logo-container">
+          <a class="navigation-logo" href="index.html">
+            <img class="page-header-logo" src="images/header/logo-header.svg" width="145" height="36"
+              alt="Логотип интернет-магазина «Девайс».">
+          </a>
+        </div>
+        <div class="header-content">
+          <!-- Пользовательская навигация -->
+          <div class="user-wrapper">
+            <form class="search-form" action="https://echo.htmlacademy.ru/" method="get" name="search-form">
+              <labeL class="visually-hidden" for="header-search-form"> Пoиск</labeL>
+              <input class="header-search" name="header-search" type="search" placeholder="Текст поиска"
+                id="header-search-form" required>
+              <button class="search-button" type="submit">Найти</button>
+            </form>
+            <ul class="navigation-user">
+              <li class="navigation-user-item enter">
+                <a class="navigation-user-link enter" href="#">Войти</a>
+              </li>
+              <li class="navigation-user-item">
+                <a class="navigation-user-link" href="#">Сравнить</a>
+              </li>
+              <li class="navigation-user-item">
+                <a class="navigation-user-link" href="#">Корзина</a>
+              </li>
+            </ul>
+          </div>
+          <!-- Главная навигация -->
+          <ul class="navigation-list">
+            <li class="navigation-item catalog-item">
+              <a class="navigation-link" href="catalog.html">Каталог</a>
+              <ul class="catalog-list visually-hidden">
+                <li class="catalog-list-item"><a class="catalog-list-item-link" href="#">Виртуальная реальность</a>
+                </li>
+                <li class="catalog-list-item"><a class="catalog-list-item-link" href="#">Моноподы для селфи</a>
+                </li>
+                <li class="catalog-list-item"><a class="catalog-list-item-link" href="#">Экшн-камеры</a></li>
+                <li class="catalog-list-item"><a class="catalog-list-item-link" href="#">Фитнес-браслеты</a></li>
+                <li class="catalog-list-item"><a class="catalog-list-item-link" href="#">Умные часы</a></li>
+                <li class="catalog-list-item"><a class="catalog-list-item-link" href="#">Квадрокоптеры</a></li>
+              </ul>
             </li>
-            <li class="navigation-user-item">
-              <a class="navigation-user-link" href="#">Сравнить</a>
+            <li class="navigation-item">
+              <a class="navigation-link" href="#">Доставка</a>
             </li>
-            <li class="navigation-user-item">
-              <a class="navigation-user-link" href="#">Корзина</a>
+            <li class="navigation-item">
+              <a class="navigation-link" href="#">Гарантии</a>
+            </li>
+            <li class="navigation-item">
+              <a class="navigation-link" href="#">Контакты</a>
             </li>
           </ul>
-        </div>
-        <!-- Главная навигация -->
-        <ul class="navigation-list">
-          <li class="navigation-item catalog-item">
-            <a class="navigation-link" href="catalog.html">Каталог</a>
-            <ul class="catalog-list visually-hidden">
-              <li class="catalog-list-item"><a class="catalog-list-item-link" href="#">Виртуальная реальность</a>
-              </li>
-              <li class="catalog-list-item"><a class="catalog-list-item-link" href="#">Моноподы для селфи</a>
-              </li>
-              <li class="catalog-list-item"><a class="catalog-list-item-link" href="#">Экшн-камеры</a></li>
-              <li class="catalog-list-item"><a class="catalog-list-item-link" href="#">Фитнес-браслеты</a></li>
-              <li class="catalog-list-item"><a class="catalog-list-item-link" href="#">Умные часы</a></li>
-              <li class="catalog-list-item"><a class="catalog-list-item-link" href="#">Квадрокоптеры</a></li>
-            </ul>
-          </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">Доставка</a>
-          </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">Гарантии</a>
-          </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">Контакты</a>
-          </li>
-        </ul>
       </nav>
+      </div>
     </header>
     <!-- Мейн -->
     <main class="main-container main-index">
@@ -76,6 +77,7 @@
         <section class="gallery">
 
           <h2 class="visually-hidden">Фотогалерея</h2>
+          <div class="yellow-box"></div>
           <ol class="slider-list">
             <!-- Первый Слайдер -->
             <li class="slider-item">
@@ -90,7 +92,7 @@
                 </button>
               </div>
               <div class="slider-text-wrapper">
-                <span class="slider-number">01</span>
+                <!-- <span class="slider-number">01</span> -->
                 <p class="slider-text slider-title">Порхает как бабочка,<br> жалит как пчела</p>
                 <p class="slider-text slider-description">Этот обычный, на первый взгляд, квадрокоптер оснащен <br>
                   мощным лазером,
@@ -115,23 +117,21 @@
                     </li>
                   </ol>
                 </div>
-                <table class="slider-advantages quadrocopter-advantages">
-                  <tr class="slider-advantages-value">
-                    <td class="slider-value">800 м</td>
-                    <td class="slider-value">50 м</td>
-                  </tr>
-                  <tr class="slider-advantages-heading">
-                    <td class="slider-property">Дальность полета</td>
-                    <td class="slider-property">Радиус поражения</td>
-                  </tr>
-                </table>
+                <dl class="slider-advantages quadrocopte-advantages">
+
+                  <dd class="slider-value">800 м</dd>
+                  <dt class="slider-property">Дальность полета</dt>
+                  <dd class="slider-value">50 м</dd>
+                  <dt class="slider-property">Радиус поражения</dt>
+                </dl>
+
               </div>
             </li>
             <!-- Второй сладер -->
             <li class="slider-item">
               <div class="slider-image-wrapper">
-                <img class="slider-image quadrocopter" src="images/slider/slider-2.png" width="560" height="560"
-                  alt="Квадрокоптер.">
+                <img class="slider-image fitness-tracker-image" src="images/slider/slider-2.png" width="560"
+                  height="560" alt="Квадрокоптер.">
                 <button class="slider-button slider-prev" type="button">
                   <span Class="visually-hidden">Предыдущее фото</span>
                 </button>
@@ -164,16 +164,12 @@
                     </li>
                   </ol>
                 </div>
-                <table class="slider-advantages quadrocopter-advantages">
-                  <tr class="slider-advantages-value">
-                    <td class="slider-value">48 часов</td>
+                <dl class="slider-advantages fitnes-tracker-advantages">
 
-                  </tr>
-                  <tr class="slider-advantages-heading">
-                    <td class="slider-property">Без подзарядки</td>
+                  <dd class="slider-value">48 часов</dd>
+                  <dt class="slider-property">Без подзарядки</dt>
+                </dl>
 
-                  </tr>
-                </table>
               </div>
             </li>
             <!-- Третий слайдер -->
@@ -214,18 +210,15 @@
                     </li>
                   </ol>
                 </div>
-                <table class="slider-advantages quadrocopter-advantages">
-                  <tr class="slider-advantages-value">
-                    <td class="slider-value">8,5 м</td>
-                    <td class="slider-value">5 кг</td>
-                    <td class="slider-value">Карбон</td>
-                  </tr>
-                  <tr class="slider-advantages-heading">
-                    <td class="slider-property">Длина палки</td>
-                    <td class="slider-property">Вес палки</td>
-                    <td class="slider-property">Материал</td>
-                  </tr>
-                </table>
+                <dl class="slider-advantages monopod-advantages">
+
+                  <dd class="slider-value">8,5 м</dd>
+                  <dt class="slider-property">Длина палки</dt>
+                  <dd class="slider-value">5 кг</dd>
+                  <dt class="slider-property">Вес палки</dt>
+                  <dd class="slider-value">Карбон</dd>
+                  <dt class="slider-property">Материал</dt>
+                </dl>
               </div>
             </li>
           </ol>
@@ -276,6 +269,7 @@
         <!-- Услуги -->
         <section class="services">
           <h2 class="visually-hidden">Услуги</h2>
+
           <div class="services-list-wrapper">
             <ol class="services-list-buttons">
               <li class="services-list-buttons-item"><button class="button services-list-button"
@@ -290,7 +284,9 @@
             </ol>
             <ol class="services-list">
               <li class="services-list-item">
-                <h3 class="services-list-title">Доставка</h3>
+                <div class="services-title-container">
+                  <h3 class="services-list-title">Доставка</h3>
+                </div>
                 <p class="services-list-text">Мы с удовольствием доставим ваш товар прямо <br> к вашему подъезду
                   совершенно бесплатно! Ведь <br> мы неплохо заработаем, поднимая его на ваш этаж.</p>
                 <img class="services-list-icon-delivery" src="#" alt="Иконка доставки.">
@@ -364,16 +360,18 @@
         </div>
         <!-- Подписка -->
         <section class="newsletter">
-          <h2 class="newsletter-title">Подпишитесь на расылку</h2>
-          <p class="newsletter-text">Еженедельный дайджест с обзорами новинок,
-            длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.</p>
-          <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
-            <label class="visually-hidden" for="email-field">Email</label>
-            <input class="newsletter-form-field" type="email" placeholder="Ваш email" name="newsletter-form"
-              id="email-field" required>
-            <button class="button newsletter-form-button" type="submit"> Подписаться</button>
-          </form>
-          <p class="free-newsletter">Это бесплатно</p>
+          <div class="newsletter-content">
+            <h2 class="newsletter-title">Подпишитесь на расылку</h2>
+            <p class="newsletter-text">Еженедельный дайджест с обзорами новинок,
+              длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.</p>
+            <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
+              <label class="visually-hidden" for="email-field">Email</label>
+              <input class="newsletter-form-field" type="email" placeholder="Ваш email" name="newsletter-form"
+                id="email-field" required>
+              <button class="button newsletter-form-button" type="submit"> Подписаться</button>
+            </form>
+            <p class="free-newsletter">Это бесплатно</p>
+          </div>
         </section>
       </div>
     </main>
