@@ -122,54 +122,56 @@
         <section class="gallery">
 
           <h2 class="visually-hidden">Фотогалерея</h2>
-          <div class="yellow-box"></div>
+
           <ol class="slider-list">
             <!-- Первый Слайдер -->
             <li class="slider-item">
-              <div class="slider-image-wrapper">
-                <img class="slider-image quadrocopter" src="images/slider/slider-1.png" width="560" height="560"
-                  alt="Квадрокоптер.">
-                <button class="slider-button slider-prev" type="button">
-                  <span Class="visually-hidden">Предыдущее фото</span>
-                </button>
-                <button class="slider-button slider-next" type="button">
-                  <span Class="visually-hidden">Следующее фото</span>
-                </button>
-              </div>
-              <div class="slider-text-wrapper">
-                <!-- <span class="slider-number">01</span> -->
-                <p class="slider-text slider-title">Порхает как бабочка,<br> жалит как пчела</p>
-                <p class="slider-text slider-description">Этот обычный, на первый взгляд, квадрокоптер оснащен <br>
-                  мощным лазером,
-                  замаскированным под стандартную камеру.</p>
-                <div class="pagination-wrap">
-                  <a class="button detailed-button" href="#">Подробнее</a>
-                  <ol class="slider-pagination-list">
-                    <li class="slider-pagination-item">
-                      <button class="slider-pagination-button slider-pagination-button-current" type="button">
-                        <span class="visually-hidden">1 фото</span>
-                      </button>
-                    </li>
-                    <li class="slider-pagination-item">
-                      <button class="slider-pagination-button" type="button">
-                        <span class="visually-hidden">2 фото</span>
-                      </button>
-                    </li>
-                    <li class="slider-pagination-item">
-                      <button class="slider-pagination-button" type="button">
-                        <span class="visually-hidden">3 фото</span>
-                      </button>
-                    </li>
-                  </ol>
+              <div class="slider-wrapper">
+                <div class="slider-image-wrapper">
+                  <img class="slider-image quadrocopter" src="images/slider/slider-1.png" width="560" height="560"
+                    alt="Квадрокоптер.">
+                  <button class="slider-button slider-prev" type="button">
+                    <span Class="visually-hidden">Предыдущее фото</span>
+                  </button>
+                  <button class="slider-button slider-next" type="button">
+                    <span Class="visually-hidden">Следующее фото</span>
+                  </button>
                 </div>
-                <dl class="slider-advantages quadrocopte-advantages">
+                <div class="slider-text-wrapper">
 
-                  <dd class="slider-value">800 м</dd>
-                  <dt class="slider-property">Дальность полета</dt>
-                  <dd class="slider-value">50 м</dd>
-                  <dt class="slider-property">Радиус поражения</dt>
-                </dl>
+                  <p class="slider-text slider-title">Порхает как бабочка,<br> жалит как пчела</p>
+                  <p class="slider-text slider-description">Этот обычный, на первый взгляд, квадрокоптер оснащен <br>
+                    мощным лазером,
+                    замаскированным под стандартную камеру.</p>
+                  <div class="pagination-wrap">
+                    <a class="button detailed-button" href="#">Подробнее</a>
+                    <ol class="slider-pagination-list">
+                      <li class="slider-pagination-item">
+                        <button class="slider-pagination-button slider-pagination-button-current" type="button">
+                          <span class="visually-hidden">1 фото</span>
+                        </button>
+                      </li>
+                      <li class="slider-pagination-item">
+                        <button class="slider-pagination-button" type="button">
+                          <span class="visually-hidden">2 фото</span>
+                        </button>
+                      </li>
+                      <li class="slider-pagination-item">
+                        <button class="slider-pagination-button" type="button">
+                          <span class="visually-hidden">3 фото</span>
+                        </button>
+                      </li>
+                    </ol>
+                  </div>
+                  <dl class="slider-advantages quadrocopte-advantages">
 
+                    <dd class="slider-value">800 м</dd>
+                    <dt class="slider-property">Дальность полета</dt>
+                    <dd class="slider-value">50 м</dd>
+                    <dt class="slider-property">Радиус поражения</dt>
+                  </dl>
+
+                </div>
               </div>
             </li>
             <!-- Второй сладер -->
@@ -343,7 +345,7 @@
 
                 <!-- <img class="services-list-icon-delivery" src="#" alt="Иконка доставки."> -->
               </li>
-              <li class="services-list-item ">
+              <li class="services-list-item visually-hidden">
                 <h3 class="services-list-title">Гарантия</h3>
                 <p class="services-list-text">Если из-за возгорания купленного у нас товара у вас <br> сгорит
                   дом —
@@ -351,7 +353,7 @@
                   переживайте, мы выдадим вам новый.<br> Товар, не дом, конечно же.</p>
                 <img class="services-list-icon-warranty" src="#" alt="Иконка гарантий.">
               </li>
-              <li class="services-list-item">
+              <li class="services-list-item visually-hidden">
                 <h3 class="services-list-title">Кредит</h3>
                 <p class="services-list-text">Залезть в долговую яму стало проще! Кредитные <br> консультанты
                   подберут
@@ -365,12 +367,12 @@
 
         <section class="rare-product-delivery">
           <h2 class="visually-hidden">Доставка редкого товара</h2>
-          <a class="rare-link">
+          <a class="rare-link" href="#">
             <div class="rare-product-icon-wrapper"></div>
             Доставим редкий товар под заказ
             <div class="rare-product-info">
-              <svg class="rare-product-info-icon" width="2" height="12" viewBox="0 0 2 12" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
+              <svg class="rare-product-info-icon" aria-hidden="true" focusable="false" width="2" height="12"
+                viewBox="0 0 2 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g opacity=".3" fill="#000">
                   <path d="M2 0H0v2h2V0ZM2 4H0v8h2V4Z" />
                 </g>
