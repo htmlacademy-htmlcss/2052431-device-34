@@ -20,10 +20,10 @@
               alt="Логотип интернет-магазина «Девайс».">
           </a>
         </div>
-        <div class="header-content">
+        <nav class="header-content">
           <!-- Пользовательская навигация -->
           <div class="user-wrapper">
-            <form class="search-form" action="https://echo.htmlacademy.ru/" method="get" name="search-form">
+            <form class="search-form" action="https://echo.htmlacademy.ru/" method="post" name="search-form">
               <labeL class="visually-hidden" for="header-search-form"> Пoиск</labeL>
               <div class="search-input-wrapper">
                 <svg class="search-icon" aria-hidden="true" focusable="false" width="16" height="17" viewBox="0 0 16 17"
@@ -32,13 +32,14 @@
                     d="m15.7 14.69-3.1-3.1c.9-1.2 1.4-2.6 1.4-4.2 0-3.9-3.1-7-7-7s-7 3.1-7 7 3.1 7 7 7c1.6 0 3-.5 4.2-1.4l3.1 3.1c.2.2.4.3.7.3.6 0 1-.4 1-1 0-.2-.1-.5-.3-.7ZM2 7.39c0-2.8 2.2-5 5-5s5 2.2 5 5-2.2 5-5 5-5-2.2-5-5Z"
                     fill="#000" />
                 </svg>
-                <input class="header-search" name="header-search" type="search" placeholder="Текст поиска"
-                  id="header-search-form" required>
+                <input class="header-search-field" name="header-search" type="text" placeholder="Поиск по сайту"
+                  value="Текст поиска" id="header-search-form" required>
+                <span class="header-search-field-focus"></span>
               </div>
 
 
 
-              <button class="search-button" type="submit">Найти</button>
+              <button class="search-button" type="submit"><span>Найти</span></button>
             </form>
             <ul class="navigation-user">
               <li class="navigation-user-item enter">
@@ -55,76 +56,141 @@
               <li class="navigation-user-item">
                 <a class="navigation-user-link compare" href="#">
 
-                  <span> <svg class="navigation-user-icon" aria-hidden="true" focusable="false" width="13" height="13"
-                      <svg width="10" height="13" viewBox="0 0 13 10" fill="currentColor"
-                      xmlns="http://www.w3.org/2000/svg">
+                  <span>
+                    <svg class="navigation-user-icon" aria-hidden="true" focusable="false" width="10" height="13"
+                      viewBox="0 0 13 10" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                       <path d="M6 .39H4v12h2v-12ZM2 4.39H0v8h2v-8ZM10 3.39H8v9h2v-9Z" fill="#000" />
                     </svg>Сравнить</span> </a>
               </li>
               <li class="navigation-user-item">
                 <a class="navigation-user-link card" href="#">
-
+                  <span class="card-counter">2</span>
                   <span> <svg class="navigation-user-icon" width="16" height="15" viewBox="0 0 16 15" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="m15.3 5.389-3.5.2-3.2-4.9c-.1-.2-.4-.3-.6-.3-.2 0-.5.1-.6.3l-3.2 4.9H.7c-.4 0-.7.3-.7.7v.2l1.9 6.8c.2.7.7 1.1 1.4 1.1h9.4c.7 0 1.2-.4 1.4-1.1l1.9-6.9v-.2c0-.4-.3-.8-.7-.8ZM8 2.289l2.2 3.2H5.9l2.1-3.2Z"
                         fill="#000" />
                     </svg>Корзина</span></a>
+                <div class="cart-popover">
+                  <h2 class="popover-title visually-hidden">Корзина</h2>
+                  <ul class="cart-popover-list">
+                    <li class="cart-popover-list-item">
+                      <a class="cart-popover-list-item-link" href="#">
+                        <img class="cart-popover-list-item-image" src="/images/catalog/catalog-product-1.jpg" width="39"
+                          height="43" alt="Любительская селфи палка">
+                        <p class="cart-popover-list-item-title">Любительская селфи-палка</p>
+                      </a>
+                      <button class="popover-cart-delete-button">
+                        <span class="visually-hidden">Удалить</span>
+                      </button>
+                    </li>
+                    <li class="cart-popover-list-item">
+                      <a class="cart-popover-list-item-link" href="#">
+                        <img class="cart-popover-list-item-image" src="/images/catalog/catalog-product-2.jpg" width="39"
+                          height="43" alt="Любительская селфи палка">
+                        <p class="cart-popover-list-item-title">Профессиональная селфи-палка</p>
+                      </a>
+                      <button class="popover-cart-delete-button">
+                        <span class="visually-hidden">Удалить</span>
+
+                      </button>
+
+                    </li>
+
+                  </ul>
+                  <ul class="cart-popover-list-total">
+                    <li class="cart-popover-list-total-product">
+                      <p class="cart-popover-list-total-product-text">Товаров:</p>
+                      <span class="cart-popover-list-total-product-counter">2</span>
+                    </li>
+                    <li class="cart-popover-list-total-product">
+                      <p class="cart-popover-list-total-product-text">Сумма:</p>
+                      <span class="cart-popover-list-total-product-counter">2000 ₽</span>
+                    </li>
+
+                  </ul>
+                  <a class="cart-open-link" href="#"><span>Открыть корзину</span></a>
+                </div>
               </li>
             </ul>
 
           </div>
-          <!-- Главная навигация -->
-          <ul class="navigation-list">
-            <li class="navigation-item catalog-item">
-              <a class="navigation-link" href="catalog.html"><span class="catalog-link">Каталог товаров
 
-                </span>
-                <!-- <svg class="catalog-navigation-icon" aria-hidden="true" focusable="false" width="50" height="51"
-                  viewBox="0 0 50 51" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle opacity=".3" cx="25" cy="25.39" r="24" stroke="#000" stroke-width="2" />
-                  <g opacity=".3" clip-path="url(#a)">
-                    <path d="M33 24.39h-7v-7h-2v7h-7v2h7v7h2v-7h7v-2Z" fill="#000" />
-                  </g>
-                  <defs>
-                    <clipPath id="a">
-                      <path fill="#fff" transform="translate(17 17.39)" d="M0 0h16v16H0z" />
-                    </clipPath>
-                  </defs>
-                </svg> -->
-              </a>
+          <div class=" navigation-list-wrapper">
+            <ul class="navigation-list-catalog">
+              <li class="navigation-list-item">
+                <button class="navigation-main-nav-button navigation-catalog-dropdown-button" type="button">Каталог
+                  товаров
+                </button>
+                <div class="submenu-wrapper">
+                  <ul class="catalog-submenu-list">
+                    <li class="catalog-submenu-list-item">
+                      <a class="catalog-submenu-list-item-link" href="#">Виртуальная реальность</a>
+                    </li>
+                    <li class="catalog-submenu-list-item">
+                      <a class="catalog-submenu-list-item-link" href="catalog.html">Моноподы для cелфи</a>
+                    </li>
+                    <li class="catalog-submenu-list-item">
+                      <a class="catalog-submenu-list-item-link" href="#">Экшн-камеры</a>
+                    </li>
+                  </ul>
+                  <ul class="catalog-submenu-list">
+                    <li class="catalog-submenu-list-item">
+                      <a class="catalog-submenu-list-item-link" href="#">Фитнес-браслеты</a>
+                    </li>
+                    <li class="catalog-submenu-list-item">
+                      <a class="catalog-submenu-list-item-link" href="#">Умные часы</a>
+                    </li>
+                  </ul>
+                  <ul class="catalog-submenu-list">
+                    <li class="catalog-submenu-list-item">
+                      <a class="catalog-submenu-list-item-link" href="#">Квадрокоптеры</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+            <ul class="navigation-list">
+              <li class="navigation-list-item">
+                <a class="navigation-list-link" href="#">Доставка</a>
+              </li>
+              <li class="navigation-list-item">
+                <a class="navigation-list-link" href="#">Гарантия</a>
+              </li>
+              <li class="navigation-list-item">
+                <a class="navigation-list-link" href="#">Контакты</a>
+              </li>
+            </ul>
+          </div>
 
-
-              <ul class="catalog-list">
-                <li class="catalog-list-item"><a class="catalog-list-item-link" href="#"><span>Виртуальная
-                      реальность</span></a>
-                </li>
-                <li class="catalog-list-item"><a class="catalog-list-item-link" href="#"><span>Моноподы для
-                      селфи</span></a>
-                </li>
-                <li class="catalog-list-item"><a class="catalog-list-item-link" href="#"><span>Экшн-камеры</span></a>
-                </li>
-                <li class="catalog-list-item"><a class="catalog-list-item-link"
-                    href="#"><span>Фитнес-браслеты</span></a></li>
-                <li class="catalog-list-item"><a class="catalog-list-item-link" href="#"><span>Умные часы</span></a>
-                </li>
-                <li class="catalog-list-item"><a class="catalog-list-item-link" href="#"><span>Квадрокоптеры</span></a>
-                </li>
-              </ul>
-            </li>
-            <li class="navigation-item">
-              <a class="navigation-link" href="#"><span>Доставка</span></a>
-            </li>
-            <li class="navigation-item">
-              <a class="navigation-link" href="#"><span>Гарантии</span></a>
-            </li>
-            <li class="navigation-item">
-              <a class="navigation-link" href="#"><span>Контакты</span></a>
-            </li>
-          </ul>
+          <div class="submenu-wrapper visually-hidden">
+            <ul class="catalog-submenu-list">
+              <li class="catalog-submenu-list-item">
+                <a class="catalog-submenu-list-item-link" href="#">Виртуальная реальность</a>
+              </li>
+              <li class="catalog-submenu-list-item">
+                <a class="catalog-submenu-list-item-link" href="catalog.html">Моноподы для cелфи</a>
+              </li>
+              <li class="catalog-submenu-list-item">
+                <a class="catalog-submenu-list-item-link" href="#">Экшн-камеры</a>
+              </li>
+            </ul>
+            <ul class="catalog-submenu-list">
+              <li class="catalog-submenu-list-item">
+                <a class="catalog-submenu-list-item-link" href="#">Фитнес-браслеты</a>
+              </li>
+              <li class="catalog-submenu-list-item">
+                <a class="catalog-submenu-list-item-link" href="#">Умные часы</a>
+              </li>
+            </ul>
+            <ul class="catalog-submenu-list">
+              <li class="catalog-submenu-list-item">
+                <a class="catalog-submenu-list-item-link" href="#">Квадрокоптеры</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
         </div>
-      </nav>
-
     </header>
     <!-- Мейн -->
     <main class="main-container main-index">
@@ -142,14 +208,16 @@
                 <div class="slider-image-wrapper">
                   <img class="slider-image quadrocopter" src="images/slider/slider-1.png" width="560" height="560"
                     alt="Квадрокоптер.">
-                  <button class="slider-button slider-prev" type="button">
-                    <span Class="visually-hidden">Предыдущее фото</span>
-                  </button>
-                  <button class="slider-button slider-next" type="button">
-                    <span Class="visually-hidden">Следующее фото</span>
-                  </button>
+                  <div class="slider-buttons-wrapper"><button class="slider-button slider-prev" type="button">
+                      <span Class="visually-hidden">Предыдущее фото</span>
+                    </button>
+                    <button class="slider-button slider-next" type="button">
+                      <span Class="visually-hidden">Следующее фото</span>
+                    </button>
+                  </div>
                 </div>
                 <div class="slider-text-wrapper">
+                  <span class="slider-number">01</span>
 
                   <p class="slider-text slider-title">Порхает как бабочка,<br> жалит как пчела</p>
                   <p class="slider-text slider-description">Этот обычный, на первый взгляд, квадрокоптер оснащен <br>
@@ -161,135 +229,166 @@
                       <li class="slider-pagination-item">
                         <button class="slider-pagination-button slider-pagination-button-current" type="button">
                           <span class="visually-hidden">1 фото</span>
-                          <div class="pagination-button-circle"></div>
+                          <svg class="pagination-icon" aria-hidden="true" focusable="false" width="12" height="12"
+                            viewBox="0 0 12 12" fill="currentColor
+                            xmlns=" http://www.w3.org/2000/svg">
+                            <circle cx="6" cy="6" r="5" fill="#fff" stroke="#000" stroke-width="2" />
+                          </svg>
 
                         </button>
                       </li>
                       <li class="slider-pagination-item">
                         <button class="slider-pagination-button" type="button">
                           <span class="visually-hidden">2 фото</span>
-                          <div class="pagination-button-circle"></div>
+                          <svg class="pagination-icon" aria-hidden="true" focusable="false" width="12" height="12"
+                            viewBox="0 0 12 12" fill="currentColor
+                          xmlns=" http://www.w3.org/2000/svg">
+                            <circle cx="6" cy="6" r="5" fill="#fff" stroke="#000" stroke-width="2" />
+                          </svg>
 
                         </button>
                       </li>
                       <li class="slider-pagination-item">
                         <button class="slider-pagination-button" type="button">
                           <span class="visually-hidden">3 фото</span>
-                          <div class="pagination-button-circle"></div>
+                          <svg class="pagination-icon" aria-hidden="true" focusable="false" width="12" height="12"
+                            viewBox="0 0 12 12" fill="currentColor
+                          xmlns=" http://www.w3.org/2000/svg">
+                            <circle cx="6" cy="6" r="5" fill="#fff" stroke="#000" stroke-width="2" />
+                          </svg>
 
                         </button>
                       </li>
                     </ol>
                   </div>
                   <dl class="slider-advantages quadrocopte-advantages">
-
-                    <dd class="slider-value">800 м</dd>
                     <dt class="slider-property">Дальность полета</dt>
-                    <dd class="slider-value">50 м</dd>
+                    <dd class="slider-value">800 м</dd>
                     <dt class="slider-property">Радиус поражения</dt>
+                    <dd class="slider-value">50 м</dd>
+
                   </dl>
 
                 </div>
               </div>
             </li>
+
             <!-- Второй сладер -->
-            <li class="slider-item">
-              <div class="slider-image-wrapper">
-                <img class="slider-image fitness-tracker-image" src="images/slider/slider-2.png" width="560"
-                  height="560" alt="Квадрокоптер.">
-                <button class="slider-button slider-prev" type="button">
-                  <span Class="visually-hidden">Предыдущее фото</span>
-                </button>
-                <button class="slider-button slider-next" type="button">
-                  <span Class="visually-hidden">Следующее фото</span>
-                </button>
-              </div>
-              <div class="slider-text-wrapper">
-                <span class="slider-number">02</span>
-                <p class="slider-text slider-title">Худеем <br> правильно!</p>
-                <p class="slider-text slider-description">Мотивирующие фитнес-браслеты помогут найти в себе силы <br> не
-                  пропускать занятия и соблюдать диету.</p>
-                <div class="pagination-wrap">
-                  <a class="button detailed-button" href="#">Подробнее</a>
-                  <ol class="slider-pagination-list">
-                    <li class="slider-pagination-item">
-                      <button class="slider-pagination-button" type="button">
-                        <span class="visually-hidden">1 фото</span>
-                        <div class="pagination-button-circle"></div>
-                      </button>
-                    </li>
-                    <li class="slider-pagination-item">
-                      <button class="slider-pagination-button   slider-pagination-button-current" type="button">
-                        <span class="visually-hidden">2 фото</span>
-                        <div class="pagination-button-circle"></div>
-                      </button>
-                    </li>
-                    <li class="slider-pagination-item">
-                      <button class="slider-pagination-button" type="button">
-                        <span class="visually-hidden">3 фото</span>
-                        <div class="pagination-button-circle"></div>
-                      </button>
-                    </li>
-                  </ol>
+            <li class="slider-item visually-hidden">
+              <div class="slider-wrapper">
+                <div class="slider-image-wrapper">
+                  <img class="slider-image fitness-tracker-image" src="images/slider/slider-2.png" width="560"
+                    height="560" alt="Квадрокоптер.">
+                  <button class="slider-button slider-prev" type="button">
+                    <span Class="visually-hidden">Предыдущее фото</span>
+                  </button>
+                  <button class="slider-button slider-next" type="button">
+                    <span Class="visually-hidden">Следующее фото</span>
+                  </button>
                 </div>
-                <dl class="slider-advantages fitnes-tracker-advantages">
+                <div class="slider-text-wrapper">
+                  <span class="slider-number">02</span>
+                  <p class="slider-text slider-title">Худеем <br> правильно!</p>
+                  <p class="slider-text slider-description">Мотивирующие фитнес-браслеты помогут найти в себе силы <br>
+                    не
+                    пропускать занятия и соблюдать диету.</p>
+                  <div class="pagination-wrap">
+                    <a class="button detailed-button" href="#">Подробнее</a>
+                    <ol class="slider-pagination-list">
+                      <li class="slider-pagination-item">
+                        <button class="slider-pagination-button" type="button">
+                          <span class="visually-hidden">1 фото</span>
+                          <svg class="pagination-icon" aria-hidden="true" focusable="false" width="12" height="12"
+                            viewBox="0 0 12 12" fill="currentColor
+                          xmlns=" http://www.w3.org/2000/svg">
+                            <circle cx="6" cy="6" r="5" fill="#fff" stroke="#000" stroke-width="2" />
+                          </svg>
+                        </button>
+                      </li>
+                      <li class="slider-pagination-item">
+                        <button class="slider-pagination-button   slider-pagination-button-current" type="button">
+                          <span class="visually-hidden">2 фото</span>
+                          <svg class="pagination-icon" aria-hidden="true" focusable="false" width="12" height="12"
+                            viewBox="0 0 12 12" fill="currentColor
+                          xmlns=" http://www.w3.org/2000/svg">
+                            <circle cx="6" cy="6" r="5" fill="#fff" stroke="#000" stroke-width="2" />
+                          </svg>
+                        </button>
+                      </li>
+                      <li class="slider-pagination-item">
+                        <button class="slider-pagination-button" type="button">
+                          <span class="visually-hidden">3 фото</span>
+                          <svg class="pagination-icon" aria-hidden="true" focusable="false" width="12" height="12"
+                            viewBox="0 0 12 12" fill="currentColor
+                            xmlns=" http://www.w3.org/2000/svg">
+                            <circle cx="6" cy="6" r="5" fill="#fff" stroke="#000" stroke-width="2" />
+                          </svg>
+                        </button>
+                      </li>
+                    </ol>
+                  </div>
+                  <dl class="slider-advantages fitnes-tracker-advantages">
+                    <dt class="slider-property">Без подзарядки</dt>
+                    <dd class="slider-value">48 часов</dd>
 
-                  <dd class="slider-value">48 часов</dd>
-                  <dt class="slider-property">Без подзарядки</dt>
-                </dl>
+                  </dl>
 
+                </div>
               </div>
             </li>
             <!-- Третий слайдер -->
-            <li class="slider-item">
-              <div class="slider-image-wrapper">
-                <img class="slider-image quadrocopter" src="images/slider/slider-3.png" width="560" height="560"
-                  alt="Квадрокоптер.">
-                <button class="slider-button slider-prev" type="button">
-                  <span Class="visually-hidden">Предыдущее фото</span>
-                </button>
-                <button class="slider-button slider-next" type="button">
-                  <span Class="visually-hidden">Следующее фото</span>
-                </button>
-              </div>
-              <div class="slider-text-wrapper">
-                <span class="slider-number">03</span>
-                <p class="slider-text slider-title">Делай селфи, <br> как Бен Стиллер!</p>
-                <p class="slider-text slider-description">Самая длинная палка для селфи доступна в нашем магазине. <br>
-                  Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.
-                </p>
-                <div class="pagination-wrap">
-                  <a class="button detailed-button" href="#">Подробнее</a>
-                  <ol class="slider-pagination-list">
-                    <li class="slider-pagination-item">
-                      <button class="slider-pagination-button" type="button">
-                        <span class="visually-hidden">1 фото</span>
-                        <div class="pagination-button-circle"></div>
-                      </button>
-                    </li>
-                    <li class="slider-pagination-item">
-                      <button class="slider-pagination-button" type="button">
-                        <span class="visually-hidden">2 фото</span>
-                        <div class="pagination-button-circle"></div>
-                      </button>
-                    </li>
-                    <li class="slider-pagination-item">
-                      <button class="slider-pagination-button  slider-pagination-button-current" type="button">
-                        <span class="visually-hidden">3 фото</span>
-                        <div class="pagination-button-circle"></div>
-                      </button>
-                    </li>
-                  </ol>
+            <li class="slider-item visually-hidden">
+              <div class="slider-wrapper">
+                <div class="slider-image-wrapper">
+                  <img class="slider-image quadrocopter" src="images/slider/slider-3.png" width="560" height="560"
+                    alt="Квадрокоптер.">
+                  <button class="slider-button slider-prev" type="button">
+                    <span Class="visually-hidden">Предыдущее фото</span>
+                  </button>
+                  <button class="slider-button slider-next" type="button">
+                    <span Class="visually-hidden">Следующее фото</span>
+                  </button>
                 </div>
-                <dl class="slider-advantages monopod-advantages">
+                <div class="slider-text-wrapper">
+                  <span class="slider-number">03</span>
+                  <p class="slider-text slider-title">Делай селфи, <br> как Бен Стиллер!</p>
+                  <p class="slider-text slider-description">Самая длинная палка для селфи доступна в нашем магазине.
+                    <br>
+                    Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.
+                  </p>
+                  <div class="pagination-wrap">
+                    <a class="button detailed-button" href="#">Подробнее</a>
+                    <ol class="slider-pagination-list">
+                      <li class="slider-pagination-item">
+                        <button class="slider-pagination-button" type="button">
+                          <span class="visually-hidden">1 фото</span>
+                          <div class="pagination-button-circle"></div>
+                        </button>
+                      </li>
+                      <li class="slider-pagination-item">
+                        <button class="slider-pagination-button" type="button">
+                          <span class="visually-hidden">2 фото</span>
+                          <div class="pagination-button-circle"></div>
+                        </button>
+                      </li>
+                      <li class="slider-pagination-item">
+                        <button class="slider-pagination-button  slider-pagination-button-current" type="button">
+                          <span class="visually-hidden">3 фото</span>
+                          <div class="pagination-button-circle"></div>
+                        </button>
+                      </li>
+                    </ol>
+                  </div>
+                  <dl class="slider-advantages monopod-advantages">
+                    <dt class="slider-property">Длина палки</dt>
+                    <dd class="slider-value">8,5 м</dd>
+                    <dt class="slider-property">Вес палки</dt>
+                    <dd class="slider-value">5 кг</dd>
+                    <dt class="slider-property">Материал</dt>
+                    <dd class="slider-value">Карбон</dd>
 
-                  <dd class="slider-value">8,5 м</dd>
-                  <dt class="slider-property">Длина палки</dt>
-                  <dd class="slider-value">5 кг</dd>
-                  <dt class="slider-property">Вес палки</dt>
-                  <dd class="slider-value">Карбон</dd>
-                  <dt class="slider-property">Материал</dt>
-                </dl>
+                  </dl>
+                </div>
               </div>
             </li>
           </ol>
@@ -297,50 +396,71 @@
         <!-- Пункты каталога -->
         <section class="catalog-categories-index">
           <h2 class="visually-hidden">Пункты каталога</h2>
-          <div class="catalog-catigories-figure">
-            <figure class="catalog-categories-item">
+          <ul class="catalog-catigories-figure">
+
+            <li class="catalog-categories-link-item">
               <a class="catalog-categories-link" href="#">
-                <img class="catalog-categories-image" src="/images/catolog-items/virtual-reality.svg"
-                  alt="Виртуальная реальность."></a>
-              <figcaption class="catalog-categories-caption"><a class="catalog-categories-caption-link"
-                  href="#">Виртуальная реальность</a></figcaption>
-            </figure>
-            <figure class="catalog-categories-item">
+                <figure class="catalog-categories-item">
+
+                  <img class="catalog-categories-image" src="/images/catolog-items/virtual-reality.svg" width="160"
+                    height="160" alt="Виртуальная реальность.">
+                  <figcaption class="catalog-categories-caption">Виртуальная реальность</figcaption>
+                </figure>
+              </a>
+            </li>
+            <li class="catalog-categories-link-item">
               <a class="catalog-categories-link" href="#">
-                <img class="catalog-categories-image monopod-icon" src="/images/catolog-items/monopod.svg"
-                  alt="Моноподы для селфи."></a>
-              <figcaption class="catalog-categories-caption"><a class="catalog-categories-caption-link"
-                  href="#">Моноподы
-                  для селфи</a></figcaption>
-            </figure>
-            <figure class="catalog-categories-item">
+                <figure class="catalog-categories-item">
+
+                  <img class="catalog-categories-image" src="/images/catolog-items/monopod.svg"
+                    alt="Моноподы для селфи.">
+                  <figcaption class="catalog-categories-caption">Моноподы для селфи</figcaption>
+                </figure>
+
+              </a>
+            </li>
+            <li class="catalog-categories-link-item">
               <a class="catalog-categories-link" href="#">
-                <img class="catalog-categories-image" src="/images/catolog-items/action-camera.svg"
-                  alt="Экшн-камеры."></a>
-              <figcaption class="catalog-categories-caption"><a class="catalog-categories-caption-link"
-                  href="#">Экшн-камеры</a></figcaption>
-            </figure>
-            <figure class="catalog-categories-item">
+                <figure class="catalog-categories-item">
+
+                  <img class="catalog-categories-image" src="/images/catolog-items/action-camera.svg"
+                    alt="Экшн-камеры.">
+                  <figcaption class="catalog-categories-caption">Экшн-камеры<figcaption>
+                </figure>
+              </a>
+            </li>
+            <li class="catalog-categories-link-item">
               <a class="catalog-categories-link" href="#">
-                <img class="catalog-categories-image" src="/images/catolog-items/fitnes-tracker.svg"
-                  alt="Фитнес-браслеты."></a>
-              <figcaption class="catalog-categories-caption"><a class="catalog-categories-caption-link"
-                  href="#">Фитнес-браслеты</a></figcaption>
-            </figure>
-            <figure class="catalog-categories-item">
+                <figure class="catalog-categories-item">
+
+                  <img class="catalog-categories-image" src="/images/catolog-items/fitnes-tracker.svg"
+                    alt="Фитнес-браслеты.">
+                  <figcaption class="catalog-categories-caption">Фитнес-браслеты</figcaption>
+                </figure>
+              </a>
+            </li>
+            <li class="catalog-categories-link-item">
               <a class="catalog-categories-link" href="#">
-                <img class="catalog-categories-image" src="/images/catolog-items/smart-watch.svg" alt="Умные часы."></a>
-              <figcaption class="catalog-categories-caption"><a class="catalog-categories-caption-link" href="#">Умные
-                  часы</a></figcaption>
-            </figure>
-            <figure class="catalog-categories-item">
+                <figure class="catalog-categories-item">
+
+                  <img class="catalog-categories-image" src="/images/catolog-items/smart-watch.svg" alt="Умные часы.">
+                  <figcaption class="catalog-categories-caption">Умные
+                    часы</figcaption>
+                </figure>
+              </a>
+            </li>
+            <li class="catalog-categories-link-item">
               <a class="catalog-categories-link" href="#">
-                <img class="catalog-categories-image" src="/images/catolog-items/quadrocopter.svg"
-                  alt="Квадрокоптеры."></a>
-              <figcaption class="catalog-categories-caption"><a class="catalog-categories-caption-link"
-                  href="#">Квадрокоптеры</a></figcaption>
-            </figure>
-          </div>
+                <figure class="catalog-categories-item">
+
+                  <img class="catalog-categories-image" src="/images/catolog-items/quadrocopter.svg"
+                    alt="Квадрокоптеры.">
+
+                  <figcaption class="catalog-categories-caption">Квадрокоптеры</figcaption>
+                </figure>
+              </a>
+            </li>
+          </ul>
         </section>
         <!-- Услуги -->
         <section class="services">
@@ -348,13 +468,14 @@
 
           <div class="services-list-wrapper">
             <ol class="services-list-buttons">
-              <li class="services-list-buttons-item"><button class="services-list-button services-list-button-current"
-                  type="button">Доставка</button>
+              <li class="services-list-buttons-item"><button
+                  class="button services-list-button services-list-button-current" type="button">Доставка</button>
               </li>
-              <li class="services-list-buttons-item"><button class="services-list-button"
+              <li class="services-list-buttons-item"><button class="button services-list-button"
                   type="button">Гарантия</button>
               </li>
-              <li class="services-list-buttons-item"><button class="services-list-button" type="button">Кредит</button>
+              <li class="services-list-buttons-item"><button class="button services-list-button"
+                  type="button">Кредит</button>
               </li>
             </ol>
             <ol class="services-list">
@@ -445,7 +566,7 @@
         <section class="newsletter">
           <div class="newsletter-content">
             <h2 class="newsletter-title">Подпишитесь на расылку</h2>
-            <p class="newsletter-text">Еженедельный дайджест с обзорами новинок,
+            <p class="newsletter-text">Еженедельный дайджест с обзорами новинок, <br>
               длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.</p>
             <div class="newsletter-form-wrapper">
               <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
@@ -550,6 +671,69 @@
 
       </div>
     </footer>
+    <div class="modal-container">
+      <div class="modal modal-rare-delivery">
+        <div class="modal-content">
+          <div class="modal-title-wrapper">
+            <h2 class="modal-rare-delivery-title">Доставка под заказ</h2>
+            <button class="modal-close-button">
+              <span class="visually-hidden">Закрыть</span>
+            </button>
+          </div>
+          <form class="delivery-form" action="https://echo.htmlacademy.ru/" method="post">
+            <div class="contacts-field-wrapper">
+              <fieldset class="field-group">
+                <label class="delivery-form-text" for="delivery-name">Ваше имя:</label>
+                <input class="delivery-form-field contacts-field contacts-field-name" type="text" id="delivery-name"
+                  name="delivery-name" placeholder="Введите имя" value="Введите имя" почтаrequired>
+                <span class="delivery-form-error-text">Укажите имя</span>
+
+              </fieldset>
+              <fieldset class="field-group">
+                <label class="delivery-form-text" for="delivery-email">Ваш e-mail:</label>
+                <input class="delivery-form-field contacts-field contacts-field-mail" type="email" id="delivery-email"
+                  name="delivery-email" placeholder="почта" value="Почта" required>
+                <span class="delivery-form-error-text">Забавный у вас адрес</span>
+              </fieldset>
+            </div>
+            <div class="products-field-wrapper">
+              <fieldset class="field-group">
+                <label class="delivery-form-text" for="delivery-product">Что нужно привезти:</label>
+                <input class="delivery-form-field products-field" type="text" id="delivery-product"
+                  name="delivery-email" placeholder="В свободной форме" value="В свободной форме" required>
+
+              </fieldset>
+              <fieldset class="field-group">
+                <span class="delivery-form-text delivery-form-icon">
+                  <label class="delivery-form-text delivery-form-text-tooltip"
+                    for="delivery-counter">Количество:</label>
+                  <span class="delivery-tooltip">
+                    <button class="delivery-tooltip-toggle" type="button" aria-labelledby="delivery-tooltip-label">
+                      <svg class="delivery-tooltip-icon" width="2" height="12" viewBox="0 0 2 12"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 0H0v2h2V0Zm0 4H0v8h2V4Z" fill="#000" />
+                      </svg>
+                    </button>
+                    <span class="delivery-tooltip-text" role="tooltip" id="delivery-tooltip-label">Постараемся найти,
+                      сколько нужно. Привезём сколько получится по требованиям к провозу багажа.</span>
+                  </span>
+                </span>
+                <div class="delivery-range-wrapper">
+                  <button class="delivery-range-toggle delivery-toggle-min" type="button">
+                    <span class="visually-hidden">Уменьшить</span>
+                  </button>
+                  <input class="delivery-form-field counter-field" type="number" id="delivery-counter"
+                    name="delivery-counter" value="1" min="1" required>
+                  <button class="delivery-range-toggle delivery-toggle-max" type="button">
+                    <span class="visually-hidden">Увеличить</span>
+                  </button>
+                </div>
+              </fieldset>
+            </div>
+            <button class="button modal-button-submit" type="submit">Отправить</button>
+        </div>
+      </div>
+    </div>
   </body>
 
 </html>
