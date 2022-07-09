@@ -10,14 +10,14 @@
 
   <body>
     <header class="page-header">
-      <nav class="navigation">
+      <div class="navigation">
         <div class="logo-container">
           <a class="navigation-logo" href="index.html">
             <img class="page-header-logo" src="images/header/logo-header.svg" width="145" height="36"
               alt="Логотип интернет-магазина «Девайс».">
           </a>
         </div>
-        <nav class="header-content">
+        <div class="header-content">
           <!-- Пользовательская навигация -->
           <div class="user-wrapper">
             <form class="search-form" action="https://echo.htmlacademy.ru/" method="post" name="search-form">
@@ -33,16 +33,13 @@
                   value="Текст поиска" id="header-search-form" required>
                 <span class="header-search-field-focus"></span>
               </div>
-
-
-
               <button class="search-button" type="submit"><span>Найти</span></button>
             </form>
-            <ul class="navigation-user">
-              <li class="navigation-user-item enter">
-                <a class="navigation-user-link enter" href="#">
 
 
+            <ul class="login-list">
+              <li class="login-list-item">
+                <a class="login-list-item-link enter" href="#">
                   <span><svg class="navigation-user-icon" aria-hidden="true" focusable="false" width="13" height="13"
                       viewBox="0 0 13 13" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                       <path
@@ -50,12 +47,14 @@
                     </svg>Коля Петухов</span>
                 </a>
               </li>
-              <li class="navigation-user-item">
-                <a class="navigation-user-link exit" href="#">Выйти</a>
+
+              <li class="login-list-item">
+                <a class="login-list-item-link exit" href="#">Выйти</a>
               </li>
+            </ul>
+            <ul class="navigation-user">
               <li class="navigation-user-item">
                 <a class="navigation-user-link compare" href="#">
-
                   <span>
                     <svg class="navigation-user-icon" aria-hidden="true" focusable="false" width="10" height="13"
                       viewBox="0 0 13 10" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -63,8 +62,8 @@
                     </svg>Сравнить</span> </a>
               </li>
               <li class="navigation-user-item">
-                <a class="navigation-user-link card" href="#">
-                  <span class="card-counter">2</span>
+                <a class="navigation-user-link cart" href="#">
+                  <span class="cart-counter">2</span>
                   <span> <svg class="navigation-user-icon" width="16" height="15" viewBox="0 0 16 15" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
                       <path
@@ -92,11 +91,8 @@
                       </a>
                       <button class="popover-cart-delete-button">
                         <span class="visually-hidden">Удалить</span>
-
                       </button>
-
                     </li>
-
                   </ul>
                   <ul class="cart-popover-list-total">
                     <li class="cart-popover-list-total-product">
@@ -113,9 +109,7 @@
                 </div>
               </li>
             </ul>
-
           </div>
-
           <div class=" navigation-list-wrapper">
             <ul class="navigation-list-catalog">
               <li class="navigation-list-item">
@@ -162,40 +156,11 @@
               </li>
             </ul>
           </div>
-
-          <div class="submenu-wrapper visually-hidden">
-            <ul class="catalog-submenu-list">
-              <li class="catalog-submenu-list-item">
-                <a class="catalog-submenu-list-item-link" href="#">Виртуальная реальность</a>
-              </li>
-              <li class="catalog-submenu-list-item">
-                <a class="catalog-submenu-list-item-link" href="catalog.html">Моноподы для cелфи</a>
-              </li>
-              <li class="catalog-submenu-list-item">
-                <a class="catalog-submenu-list-item-link" href="#">Экшн-камеры</a>
-              </li>
-            </ul>
-            <ul class="catalog-submenu-list">
-              <li class="catalog-submenu-list-item">
-                <a class="catalog-submenu-list-item-link" href="#">Фитнес-браслеты</a>
-              </li>
-              <li class="catalog-submenu-list-item">
-                <a class="catalog-submenu-list-item-link" href="#">Умные часы</a>
-              </li>
-            </ul>
-            <ul class="catalog-submenu-list">
-              <li class="catalog-submenu-list-item">
-                <a class="catalog-submenu-list-item-link" href="#">Квадрокоптеры</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
         </div>
+      </div>
+      </nav>
     </header>
-
-
     <main class="main-inner main-container">
-
       <header class="inner-header">
         <h1 class="inner-header-title">Моноподы для селфи</h1>
         <ul class="breadcrumbs">
@@ -203,7 +168,7 @@
             <a class="breadcrumbs-link" href="index.html">Главная</a>
           </li>
           <li class="breadcrumbs-item">
-            <a class="breadcrumbs-link" href="#">Каталог</a>
+            <a class="breadcrumbs-link" href="#">Каталог товаров</a>
           </li>
           <li class="breadcrumbs-item">
             <a class="breadcrumbs-link">Моноподы для селфи</a>
@@ -329,7 +294,7 @@
                       alt="Любительская селфи-палка">
 
                     <div class="card-content">
-                      <h3 class="prodct-card-title">Любительская селфи-палка</h3>
+                      <h3 class="prodct-card-title">Любительская <br>селфи-палка</h3>
 
                       <b class="product-card-price">500 ₽</b>
 
@@ -366,7 +331,7 @@
 
 
                     <div class="card-content">
-                      <h3 class="prodct-card-title">Непотопляемая селфи-палка</h3>
+                      <h3 class="prodct-card-title">Непотопляемая <br>селфи-палка</h3>
 
 
                       <b class="product-card-price">1500 ₽</b>
@@ -429,24 +394,19 @@
         </div>
 
       </section>
-
     </main>
     <footer class="page-footer">
       <div class="page-footer-container">
         <section class="footer-contacts">
           <h2 class="visually-hidden">Адрес</h2>
-
           <a class="navigation-logo-footer" href="index.html"><img class="footer-contacts-logo"
               src="images/footer/logo-footer.svg" width="145" height="36" alt="Логотип интернет-магазина «Девайс»."></a>
-
           <address class="footer-contacts-address">
             <p class="footer-contacts-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
           </address>
           <div class="footer-rectangle"></div>
         </section>
         <div class="footer-center-column">
-
-
           <section class="footer-navigation">
             <h2 class="visually-hidden">Меню</h2>
             <ul class="footer-navigation-list">
@@ -518,7 +478,6 @@
             </svg>
           </a>
         </section>
-
       </div>
     </footer>
   </body>
