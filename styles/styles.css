@@ -71,8 +71,8 @@ body {
   height: 8px;
   background-color: #FFE17F;
   position: absolute;
-  left: 50%;
-  right: 50%;
+  left: 0;
+  right: 0;
   top: 40%;
   bottom: 40%;
   transition: all 0.5s;
@@ -90,8 +90,8 @@ body {
 }
 
 .button:focus {
-  border: 2px solid #AF4FFF;
-  outline: none;
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
 
 }
 
@@ -156,8 +156,8 @@ body {
 }
 
 .navigation-logo:focus {
-  border: 2px solid #AF4FFF;
-  outline: none;
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
 }
 
 .logo-container {
@@ -187,8 +187,9 @@ body {
   position: relative;
   width: 517px;
   box-sizing: border-box;
-  margin-right: auto;
+
   margin: 0;
+  margin-right: 27px;
   padding: 0;
   display: flex;
   align-items: center;
@@ -197,14 +198,14 @@ body {
 
 
 .header-search-field {
-  font-family: Rubik;
+  font-family: Rubik, sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
   color: #000;
   background-color: #FFE17F;
   width: 360px;
-  min-width: 38px;
+
   box-sizing: border-box;
   border: none;
   outline: none;
@@ -226,6 +227,7 @@ body {
   border-radius: 50px 0 0 50px;
   box-sizing: border-box;
   width: 359px;
+  height: 40px;
   align-items: center;
 
 
@@ -267,20 +269,20 @@ body {
 
 
 .search-button {
-  font-family: Rubik;
+  font-family: Rubik, sans-serif;
   font-weight: 400;
   font-size: 15px;
   line-height: 20px;
   color: #000;
   background-color: #FFE17F;
-
+  box-sizing: border-box;
   padding: 10px;
   border-radius: 0 50px 50px 0;
-  box-sizing: border-box;
+
   width: 160px;
-  min-height: 38px;
+  height: 40px;
   margin: 0;
-  margin-right: 27px;
+
 
   border-left: 0;
   border-color: #000;
@@ -343,9 +345,7 @@ body {
   margin-right: 26px;
 }
 
-.login-list .enter {
-  margin-right: 28px;
-}
+
 
 .login-list-item:last-of-type {
   margin-right: 0;
@@ -363,7 +363,21 @@ body {
   text-align: center;
 }
 
+.login-list-item-link:hover {
+  opacity: 0.6;
+}
+
+.login-list-item-link:active {
+  opacity: 0.3;
+}
+
+.login-list-item-linkk:focus {
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
+}
+
 .login-list-item .enter {
+  margin-right: 28px;
   padding-left: 27px;
 }
 
@@ -417,17 +431,17 @@ body {
 
 }
 
-.navigation-user-link:hover span {
+.navigation-user-link:hover {
   opacity: 0.6;
 }
 
-.navigation-user-link:active span {
+.navigation-user-link:active {
   opacity: 0.3;
 }
 
 .navigation-user-link:focus {
-  outline: 2px solid #AF4FFF;
-  border: 0;
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
 }
 
 
@@ -949,18 +963,30 @@ body {
 .slider-image-wrapper {
   width: 560px;
   height: 560px;
+
   display: flex;
   align-items: center;
   position: relative;
 }
 
 
-.slider-image .quadrocopter {
+.slider-image-wrapper .quadrocopter-image {
   width: 560px;
   height: 560px;
+  object-fit: contain;
 }
 
+.slider-image-wrapper .fitness-tracker-image {
+  width: 560px;
+  height: 560px;
+  object-fit: contain;
+}
 
+.slider-image-wrapper .monopod-image {
+  width: 560px;
+  height: 560px;
+  object-fit: contain;
+}
 
 .slider-text {
   margin: 0;
@@ -1603,6 +1629,12 @@ body {
 
 }
 
+.contacts-phone:focus {
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
+
+}
+
 .contacts-subtitle {
   font-size: 24px;
   font-weight: 700;
@@ -1687,7 +1719,7 @@ body {
 }
 
 .newsletter-form-field {
-  font-family: Rubik;
+  font-family: Rubik, sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 30px;
@@ -1749,7 +1781,7 @@ body {
   width: 253px;
   border: 3px solid #C4C4C4;
   box-sizing: border-box;
-  /* padding: 18px 39px; */
+
   transition: all 0.5s;
 }
 
@@ -1884,8 +1916,8 @@ body {
 }
 
 .footer-navigation-link:focus {
-  border: 2px solid #AF4FFF;
-  outline: 0;
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
 }
 
 .footer-center-column {
@@ -1914,7 +1946,7 @@ body {
   width: 175px;
   display: flex;
   flex-direction: column;
- 
+
 }
 
 
@@ -1936,8 +1968,8 @@ body {
 }
 
 .footer-contacts-phone-number:focus {
-  border: 2px solid #AF4FFF;
-  outline: 0;
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
 }
 
 .htmlacademy-link {
@@ -1955,8 +1987,8 @@ body {
 }
 
 .htmlacademy-link:focus {
-  border: 2px solid #AF4FFF;
-  outline: 0;
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
 }
 
 /* Футер-социальные сети */
@@ -2077,16 +2109,14 @@ body {
   display: flex;
 }
 
-
+/* Хлебные крошки */
 .breadcrumbs {
   margin: 0;
   padding: 0;
   display: flex;
+  list-style-type: none;
 }
 
-.breadcrumbs-item {
-  list-style: none;
-}
 
 .breadcrumbs-item:not(:last-child) {
   margin-right: 16px;
@@ -2097,44 +2127,6 @@ body {
   background-position: right center;
 }
 
-
-
-/* Фильтр */
-
-.catalog-products {
-  background-color: #F0F0F0;
-
-
-
-}
-
-.catalog-products-wrapper {
-
-  margin: 0 auto;
-
-  width: 1160px;
-  display: flex;
-}
-
-
-.breadcrumbs {
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
-
-.breadcrumbs-item {
-  list-style: none;
-}
-
-.breadcrumbs-item:not(:last-child) {
-  margin-right: 16px;
-  padding-right: 20px;
-  background-image: url(../images/catalog/icons/breadcrumbs-arrow.svg);
-  background-repeat: no-repeat;
-  background-size: 4px 7px;
-  background-position: right center;
-}
 
 
 
@@ -2242,7 +2234,7 @@ body {
 }
 
 .catalog-filter-label {
-  font-family: 'Rubik';
+  font-family: Rubik, sans-serif;
   font-weight: 400;
   font-size: 15px;
   line-height: 18px;
@@ -2296,11 +2288,12 @@ body {
 /* Фильтр  */
 .catalog-filter-group {
   margin: 0;
+  margin-bottom: 30px;
   padding: 0;
   border: none;
 
   position: relative;
-  margin-bottom: 30px;
+
 }
 
 .catalog-filter-group::before {
@@ -2310,7 +2303,7 @@ body {
   background-color: #000;
   position: absolute;
   top: -60px;
-  ;
+
   left: 0;
 }
 
@@ -2325,7 +2318,7 @@ body {
 
 .control {
   position: relative;
-  /* padding-left: 36px; */
+
   display: flex;
   justify-content: start;
   align-items: center;
@@ -2392,7 +2385,7 @@ body {
   height: 16px;
   top: 3px;
   left: 3px;
-  background-image: url("../images/icons/checkbox-icon.svg");
+  background-image: url("../images/catalog/icons/checkbox-icon.svg");
   background-repeat: no-repeat;
   background-size: 10px 10px;
 }
@@ -2467,7 +2460,7 @@ body {
 
 
 .sorting-control {
-  font-family: Rubik;
+  font-family: Rubik, sans-serif;
   font-size: 18px;
   line-height: 30px;
   border: 0;
