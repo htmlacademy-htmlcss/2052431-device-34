@@ -371,7 +371,7 @@ body {
   opacity: 0.3;
 }
 
-.login-list-item-linkk:focus {
+.login-list-item-link:focus {
   outline: 2px solid #af4fff;
   outline-offset: 2px;
 }
@@ -2007,6 +2007,7 @@ body {
   opacity: 30%;
 }
 
+
 /* Внутренний хедер */
 
 .inner-header {
@@ -2641,6 +2642,7 @@ body {
 
 .pagination-wrapper {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   width: 760px;
   margin-bottom: 78px;
@@ -2740,6 +2742,10 @@ body {
   font-weight: 700;
   line-height: 21.13px;
   text-transform: uppercase;
+}
+
+.pagination-next {
+  padding-left: 15px;
 }
 
 /* Модальное окно */
