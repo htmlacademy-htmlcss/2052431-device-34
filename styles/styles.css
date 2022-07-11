@@ -2188,13 +2188,15 @@ body {
 .catalog-filter-label {
   width: 30px;
   margin-left: -14px;
-  margin-right: 67px;
+  /* margin-right: 67px; */
+  margin-right: 85px;
   font-family: Rubik, sans-serif;
   font-weight: 400;
   font-size: 15px;
   line-height: 18px;
   text-align: center;
   opacity: 0.3;
+
 
 }
 
@@ -2393,6 +2395,7 @@ body {
 .catalog-right-column {
   width: 840px;
   background-color: #fff;
+  margin: 0 auto;
 }
 
 /* Сортировка */
