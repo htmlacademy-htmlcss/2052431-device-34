@@ -193,11 +193,8 @@ body {
   margin: 0;
   margin-right: 27px;
   padding: 0;
-
   font-size: 16px;
   line-height: 20px;
-
-
 }
 
 
@@ -276,9 +273,9 @@ body {
 .search-button {
   position: relative;
   width: 160px;
-  height: 40px;
-  margin: 0;
   box-sizing: border-box;
+  margin: 0;
+  padding: 8px 26px;
   font-family: Rubik, sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -288,7 +285,6 @@ body {
   border-radius: 0 50px 50px 0;
   border-left: 0;
   border-color: #000;
-
 
 }
 
@@ -375,7 +371,7 @@ body {
   opacity: 0.3;
 }
 
-.login-list-item-linkk:focus {
+.login-list-item-link:focus {
   outline: 2px solid #af4fff;
   outline-offset: 2px;
 }
@@ -1086,7 +1082,7 @@ body {
 }
 
 .detailed-button {
-  width: 220px;
+  min-width: 220px;
   margin-right: 264px;
   text-decoration: none;
   color: #000;
@@ -1309,7 +1305,7 @@ body {
 }
 
 .services-list-button {
-  width: 160px;
+  min-width: 160px;
 }
 
 .services-list-button-current {
@@ -1402,64 +1398,75 @@ body {
 
 }
 
-.rare-link {
+.rare-button {
+  position: relative;
+  width: 1160px;
+  height: 100px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-end;
   align-items: center;
-  padding-right: 42.5px;
+  box-sizing: border-box;
+  padding-left: 125px;
+  /* padding-right: 42.5px; */
+  padding-right: 322px;
   font-family: Raleway, sans-serif;
   text-transform: uppercase;
   font-size: 20px;
   line-height: 23.48px;
   letter-spacing: 0.2em;
-  text-decoration: none;
   color: #000;
-
-
+  border: none;
+  cursor: pointer;
 }
 
-.rare-product-icon-wrapper {
+.rare-button::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
   width: 125px;
-  min-height: 100px;
-  margin-right: 198px;
+  height: 100px;
   background-color: #FFE17F;
-  background-image: url(../images/services/icon-custom-products.svg);
+  background-image: url("../images/services/icon-custom-products.svg");
   background-repeat: no-repeat;
+  background-size: 41px 31px;
   background-position: center;
-  background-size: 47px 31px;
 
 }
 
-.rare-delivery-text {
-  margin-right: auto;
-}
+
 
 .rare-product-info {
-  position: relative;
+  position: absolute;
+  color: "";
+  top: 30px;
+  right: 42.5px;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 40px;
   height: 40px;
+  margin-left: 200px;
   background: rgba(220, 220, 220, 0.5);
   border-radius: 50%;
 }
 
-.rare-link:hover .rare-product-icon-wrapper {
+.rare-button:hover::before {
   background-color: #FFC700;
 }
 
-.rare-link:hover .rare-product-info-icon g {
+.rare-button:hover .rare-product-info-icon g {
   opacity: 1;
 }
 
-.rare-link:active {
+.rare-button:active {
   opacity: 0.3;
 }
 
-.rare-link:focus {
-  border: 2px solid #AF4FFF;
-  outline: none;
+.rare-button:focus {
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
 }
 
 /* О нас */
@@ -1481,7 +1488,7 @@ body {
 .about-company::before {
   position: absolute;
   content: "";
-  top: -40px;
+  top: -45px;
   width: 84px;
   height: 7px;
   background-color: #444;
@@ -1735,8 +1742,10 @@ body {
 
 .newsletter-form-button {
   width: 253px;
-  min-height: 57px;
+  /* min-height: 57px; */
+
   box-sizing: border-box;
+  padding: 16px 39px;
   font-family: Raleway, sans-serif;
   font-size: 18px;
   font-weight: 800;
@@ -1793,7 +1802,7 @@ body {
 /* Фтуер-адрес */
 .navigation-logo-footer {
   display: block;
-  margin-bottom: 30px;
+  margin-bottom: 28px;
 }
 
 .footer-contacts {
@@ -1877,7 +1886,7 @@ body {
   flex-direction: column;
   width: 444px;
   margin-right: 180px;
-  padding-top: 75px;
+  padding-top: 70px;
 }
 
 .footer-social {
@@ -1904,8 +1913,8 @@ body {
 
 
 .footer-contacts-phone-number {
-  margin-bottom: 63px;
-  margin-left: 0;
+  margin-bottom: 55px;
+  margin-left: 5px;
   font-size: 16px;
   color: #fff;
   text-decoration: underline;
@@ -1997,6 +2006,7 @@ body {
 .exit {
   opacity: 30%;
 }
+
 
 /* Внутренний хедер */
 
@@ -2179,13 +2189,15 @@ body {
 .catalog-filter-label {
   width: 30px;
   margin-left: -14px;
-  margin-right: 67px;
+  /* margin-right: 67px; */
+  margin-right: 85px;
   font-family: Rubik, sans-serif;
   font-weight: 400;
   font-size: 15px;
   line-height: 18px;
   text-align: center;
   opacity: 0.3;
+
 
 }
 
@@ -2384,13 +2396,13 @@ body {
 .catalog-right-column {
   width: 840px;
   background-color: #fff;
+  margin: 0 auto;
 }
 
 /* Сортировка */
 
 .sorting-wrapper {
   display: flex;
-  /* justify-content: space-between; */
   align-items: center;
   width: 840px;
   height: 70px;
@@ -2591,11 +2603,11 @@ body {
 .pagination-show-more {
   position: relative;
   width: 760px;
-  height: 55px;
-  box-sizing: border-box;
   margin-left: 40px;
-  /* margin-bottom: 35px; */
   margin-bottom: 42px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  box-sizing: border-box;
   padding-left: 25px;
   text-transform: uppercase;
   font-weight: 800;
@@ -2630,7 +2642,7 @@ body {
 
 .pagination-wrapper {
   display: flex;
-  /* justify-content: space-between; */
+  justify-content: space-between;
   align-items: center;
   width: 760px;
   margin-bottom: 78px;
@@ -2730,6 +2742,10 @@ body {
   font-weight: 700;
   line-height: 21.13px;
   text-transform: uppercase;
+}
+
+.pagination-next {
+  padding-left: 15px;
 }
 
 /* Модальное окно */
