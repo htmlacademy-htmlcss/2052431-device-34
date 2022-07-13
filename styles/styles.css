@@ -649,6 +649,7 @@ body {
 /* Главная навигация */
 .navigation-catalog-dropdown-button {
   position: relative;
+  z-index: 15;
   display: block;
   width: 293px;
   min-width: 236px;
@@ -674,6 +675,7 @@ body {
   content: "";
   top: 0;
   right: 0;
+  z-index: 5;
   width: 50px;
   height: 50px;
   box-sizing: border-box;
@@ -757,6 +759,7 @@ body {
 
 .navigation-list-item {
   position: relative;
+  z-index: 15;
   margin-bottom: 14px;
 }
 
@@ -856,6 +859,7 @@ body {
 /* Слайдер */
 
 .gallery {
+  position: relative;
   width: 1160px;
   margin: 0 auto;
   background-color: #fff;
@@ -880,7 +884,6 @@ body {
 }
 
 .slider-image-wrapper {
-  position: relative;
   display: flex;
   align-items: center;
   width: 560px;
@@ -933,7 +936,6 @@ body {
   opacity: 0.6;
 }
 
-
 .slider-button:active {
   opacity: 0.3;
 }
@@ -977,10 +979,13 @@ body {
 }
 
 .slider-description {
-  margin-bottom: 50px;
+  margin-bottom: 140px;
 }
 
 .pagination-wrap {
+  position: absolute;
+  top: 362px;
+  right: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1007,41 +1012,53 @@ body {
 }
 
 .slider-pagination-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+  z-index: 20;
+  display: block;
+  box-sizing: border-box;
+  padding: 0;
   width: 12px;
   height: 12px;
-  padding: 0;
-  border: 0;
-  outline: 0;
+  border-radius: 50%;
+  border: 2px #000000 solid;
   background-color: transparent;
   cursor: pointer;
 }
 
-.pagination-button-circle {
-  width: 12px;
-  height: 12px;
-  box-sizing: border-box;
-  border: 2px solid #000;
-  border-radius: 100%;
+.slider-pagination-button-current {
+  background-color: #000;
 }
 
-.slider-pagination-button:hover .pagination-button-circle {
+.slider-pagination-button:hover,
+.slider-paginator-button-current:hover {
   opacity: 0.6;
 }
 
-.slider-pagination-button:active .pagination-button-circle {
+.slider-pagination-button:active,
+.slider-paginator-button-current:active {
   opacity: 0.3;
 }
 
-.slider-pagination-button:focus {
-  outline: 2px solid #AF4FFF;
-  border: 0;
+.slider-pagination-button:disabled,
+.slider-paginator-button-current:disabled {
+  opacity: 0.1;
 }
 
-.slider-pagination-button-current + .pagination-icon {
-  fill: #000;
+.slider-pagination-button:focus,
+.slider-paginator-button-current:focus {
+  outline: none;
+}
+
+.slider-pagination-button:focus::after,
+.slider-paginator-button-current:focus::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  outline: 2px solid #af4fff;
+  outline-offset: 3px;
 }
 
 .slider-value {
@@ -1064,7 +1081,7 @@ body {
   display: grid;
   grid-template-columns: repeat(3, max-content);
   column-gap: 40px;
-  row-gap: 15px;
+  row-gap: 12px;
   width: 385px;
 }
 
@@ -1072,14 +1089,14 @@ body {
   display: grid;
   grid-template-columns: max-content max-content;
   column-gap: 20px;
-  row-gap: 15px;
+  row-gap: 12px;
   width: 305px;
 }
 
 .fitnes-tracker-advantages {
   display: grid;
   grid-template-columns: max-content;
-  row-gap: 15px;
+  row-gap: 12px;
   width: 385px;
 }
 
@@ -1099,7 +1116,7 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 0;
-  margin-bottom: 75px;
+  margin-bottom: 81px;
   padding: 0;
   list-style: none;
 }
@@ -1158,7 +1175,7 @@ body {
 
 .services {
   position: relative;
-  margin-bottom: 70px;
+  margin-bottom: 77px;
   background: linear-gradient(to bottom, #ffffff 102px, #f0f0f0 102px);
 }
 
@@ -1233,8 +1250,8 @@ body {
 }
 
 .services-list-item.delivery-service {
-  padding-left: 122px;
-  padding-top: 78px;
+  padding-left: 119px;
+  padding-top: 74px;
   background-image: url(../images/services/icon-delivery.svg);
   background-repeat: no-repeat;
   background-position: 680px 80px;
@@ -1293,7 +1310,7 @@ body {
   align-items: center;
   box-sizing: border-box;
   padding-left: 125px;
-  padding-right: 322px;
+  padding-right: 318px;
   font-family: Raleway, sans-serif;
   text-transform: uppercase;
   font-size: 20px;
@@ -1314,7 +1331,7 @@ body {
   background-color: #FFE17F;
   background-image: url("../images/services/icon-custom-products.svg");
   background-repeat: no-repeat;
-  background-size: 41px 31px;
+  background-size: 46px 31px;
   background-position: center;
 }
 
@@ -1439,7 +1456,7 @@ body {
 .contacts::before {
   position: absolute;
   content: "";
-  top: -40px;
+  top: -45px;
   width: 84px;
   height: 7px;
   background-color: #444;
@@ -1668,8 +1685,22 @@ body {
 
 /* Фтуер-адрес */
 .navigation-logo-footer {
-  display: block;
+  display: inline-block;
   margin-bottom: 28px;
+
+}
+
+.navigation-logo-footer:hover {
+  opacity: 0.6;
+}
+
+.navigation-logo-footer:active {
+  opacity: 0.3;
+}
+
+.navigation-logo-footer:focus {
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
 }
 
 .footer-contacts {
@@ -2438,13 +2469,16 @@ body {
   padding-top: 15px;
   padding-bottom: 15px;
   box-sizing: border-box;
-  padding-left: 25px;
+  /* padding-left: 25px; */
+  /* padding-left: 294.5px;
+  padding-right: 294.5px; */
   font-family: Raleway, sans-serif;
   text-transform: uppercase;
   font-weight: 800;
   font-size: 16px;
-  line-height: 18px;
+  line-height: 19px;
   letter-spacing: 0.2em;
+  text-align: center;
   background-color: #fff;
   border: 3px solid #E5E5E5;
   outline: 0;
@@ -2482,7 +2516,7 @@ body {
 }
 
 .pagination-prev {
-  margin-right: 145.5px;
+  margin-right: 132px;
 }
 
 .catalog-pagination-button {
@@ -2569,7 +2603,7 @@ body {
 }
 
 .pagination-next {
-  padding-left: 15px;
+  padding-left: 10px;
 }
 
 /* Модальное окно */
